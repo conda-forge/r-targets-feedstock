@@ -1,4 +1,4 @@
-{% set version = '0.2.0' %}
+{% set version = "0.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/targets_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/targets/targets_{{ version }}.tar.gz
-  sha256: 7de246f748301417e307135c222068a9cdc7bd832c59c70f3b67a943bd42376a
+  sha256: 853c96878b9efca1a5e86f22af0b71b5455bb6f8901e78414868f647dc517e90
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -60,16 +60,11 @@ test:
 about:
   home: https://docs.ropensci.org/targets/, https://github.com/ropensci/targets
   license: MIT
-  summary: As a pipeline toolkit for Statistics and data science in R, the 'targets' package
-    brings together function-oriented programming and 'Make'-like declarative workflows.
-    It analyzes the dependency relationships among the tasks of a workflow, skips steps
-    that are already up to date, runs the necessary computation with optional parallel
-    workers, abstracts files as R objects, and provides tangible evidence that the results
-    match the underlying code and data. The methodology in this package borrows from
-    GNU 'Make' (2015, ISBN:978-9881443519) and 'drake' (2018, <doi:10.21105/joss.00550>).
+  summary: As a pipeline toolkit for Statistics and data science in R, the 'targets' package brings together function-oriented programming and 'Make'-like declarative workflows. It analyzes the dependency relationships among the tasks of a workflow, skips steps that are already up to date, runs the necessary computation
+    with optional parallel workers, abstracts files as R objects, and provides tangible evidence that the results match the underlying code and data. The methodology in this package borrows from GNU 'Make' (2015, ISBN:978-9881443519) and 'drake' (2018, <doi:10.21105/joss.00550>).
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:

@@ -1,4 +1,4 @@
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/targets_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/targets/targets_{{ version }}.tar.gz
-  sha256: c9a98bc82b84a2defdc1c045e527dafeb5e2e09e23910aabfd796c3be0f3b5a7
+  sha256: 1665913ba61db4a4fb8b257e5e1c749f8a0a058d091f8df49474406c14259651
 
 build:
   merge_build_host: true  # [win]
@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-r6 >=2.4.1
@@ -32,7 +33,8 @@ requirements:
     - r-data.table >=1.12.8
     - r-digest >=0.6.25
     - r-igraph >=1.2.5
-    - r-rlang >=0.4.5
+    - r-knitr >=1.34
+    - r-rlang >=0.4.10
     - r-tibble >=3.0.1
     - r-tidyselect >=1.1.0
     - r-vctrs >=0.2.4
@@ -47,7 +49,8 @@ requirements:
     - r-data.table >=1.12.8
     - r-digest >=0.6.25
     - r-igraph >=1.2.5
-    - r-rlang >=0.4.5
+    - r-knitr >=1.34
+    - r-rlang >=0.4.10
     - r-tibble >=3.0.1
     - r-tidyselect >=1.1.0
     - r-vctrs >=0.2.4

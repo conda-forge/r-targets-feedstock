@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/targets_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/targets/targets_{{ version }}.tar.gz
-  sha256: 8d46079db429782ae2a9af2cf65ecb50b7af880996f0d8a63fc1ae11f638a68d
+  sha256: 0841a183738eee0889dc40e40f8ce2ddfb39d3c430782d92acc6671e8da434b1
 
 build:
   merge_build_host: true  # [win]
@@ -27,6 +27,7 @@ requirements:
   host:
     - r-base
     - r-r6 >=2.4.1
+    - r-base64url >=1.4
     - r-callr >=3.4.3
     - r-cli >=2.0.2
     - r-codetools >=0.2.16
@@ -38,11 +39,12 @@ requirements:
     - r-tibble >=3.0.1
     - r-tidyselect >=1.1.0
     - r-vctrs >=0.2.4
-    - r-withr >=2.1.2
+    - r-withr >=2.4.0
     - r-yaml >=2.2.1
   run:
     - r-base
     - r-r6 >=2.4.1
+    - r-base64url >=1.4
     - r-callr >=3.4.3
     - r-cli >=2.0.2
     - r-codetools >=0.2.16
@@ -54,7 +56,7 @@ requirements:
     - r-tibble >=3.0.1
     - r-tidyselect >=1.1.0
     - r-vctrs >=0.2.4
-    - r-withr >=2.1.2
+    - r-withr >=2.4.0
     - r-yaml >=2.2.1
 
 test:

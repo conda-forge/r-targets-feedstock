@@ -1,11 +1,11 @@
-About r-targets
-===============
+About r-targets-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-targets-feedstock/blob/main/LICENSE.txt)
 
 Home: https://docs.ropensci.org/targets/, https://github.com/ropensci/targets
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-targets-feedstock/blob/main/LICENSE.txt)
 
 Summary: As a pipeline toolkit for Statistics and data science in R, the 'targets' package brings together function-oriented programming and 'Make'-like declarative workflows. It analyzes the dependency relationships among the tasks of a workflow, skips steps that are already up to date, runs the necessary computation with optional parallel workers, abstracts files as R objects, and provides tangible evidence that the results match the underlying code and data. The methodology in this package borrows from GNU 'Make' (2015, ISBN:978-9881443519) and 'drake' (2018, <doi:10.21105/joss.00550>).
 

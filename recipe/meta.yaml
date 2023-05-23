@@ -1,4 +1,4 @@
-{% set version = "1.1.2" %}
+{% set version = "1.1.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/targets_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/targets/targets_{{ version }}.tar.gz
-  sha256: a6d43e0f9c2eb9c3e30272e2472804554ece736797eaf7192f4a80cbb0bf21a8
+  sha256: b5f5dedfd4b42a54f7950cf9fe8d7a416f741d69748185c086ae72e8ff6aba54
 
 build:
   merge_build_host: true  # [win]
@@ -35,11 +35,10 @@ requirements:
     - r-digest >=0.6.25
     - r-igraph >=1.2.5
     - r-knitr >=1.34
-    - r-rlang >=0.4.10
+    - r-rlang >=1.0.0
     - r-tibble >=3.0.1
     - r-tidyselect >=1.1.0
     - r-vctrs >=0.2.4
-    - r-withr >=2.4.0
     - r-yaml >=2.2.1
   run:
     - r-base
@@ -52,11 +51,10 @@ requirements:
     - r-digest >=0.6.25
     - r-igraph >=1.2.5
     - r-knitr >=1.34
-    - r-rlang >=0.4.10
+    - r-rlang >=1.0.0
     - r-tibble >=3.0.1
     - r-tidyselect >=1.1.0
     - r-vctrs >=0.2.4
-    - r-withr >=2.4.0
     - r-yaml >=2.2.1
 
 test:

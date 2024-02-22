@@ -1,4 +1,4 @@
-{% set version = "1.4.1" %}
+{% set version = "1.5.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/targets_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/targets/targets_{{ version }}.tar.gz
-  sha256: 3870a76055777f7b3dcb2b3a506af99411f72132f49fbd34ba6c4963a4455d4d
+  sha256: 4bffd34944a19a8a3bcdc75e453e22628a2ac7f103271e4c86afc972c16541bc
 
 build:
   merge_build_host: true  # [win]
@@ -33,9 +33,11 @@ requirements:
     - r-codetools >=0.2.16
     - r-data.table >=1.12.8
     - r-digest >=0.6.25
-    - r-igraph >=1.2.5
+    - r-igraph >=2.0.0
     - r-knitr >=1.34
+    - r-ps
     - r-rlang >=1.0.0
+    - r-secretbase
     - r-tibble >=3.0.1
     - r-tidyselect >=1.1.0
     - r-vctrs >=0.2.4
@@ -49,9 +51,11 @@ requirements:
     - r-codetools >=0.2.16
     - r-data.table >=1.12.8
     - r-digest >=0.6.25
-    - r-igraph >=1.2.5
+    - r-igraph >=2.0.0
     - r-knitr >=1.34
+    - r-ps
     - r-rlang >=1.0.0
+    - r-secretbase
     - r-tibble >=3.0.1
     - r-tidyselect >=1.1.0
     - r-vctrs >=0.2.4
@@ -63,7 +67,8 @@ test:
     - "\"%R%\" -e \"library('targets')\""  # [win]
 
 about:
-  home: https://docs.ropensci.org/targets/, https://github.com/ropensci/targets
+  home: https://docs.ropensci.org/targets/
+  dev_url: https://github.com/ropensci/targets
   license: MIT
   summary: As a pipeline toolkit for Statistics and data science in R, the 'targets' package brings together function-oriented programming and 'Make'-like declarative workflows. It analyzes the dependency relationships among the tasks of a workflow, skips steps that are already up to date, runs the necessary computation
     with optional parallel workers, abstracts files as R objects, and provides tangible evidence that the results match the underlying code and data. The methodology in this package borrows from GNU 'Make' (2015, ISBN:978-9881443519) and 'drake' (2018, <doi:10.21105/joss.00550>).

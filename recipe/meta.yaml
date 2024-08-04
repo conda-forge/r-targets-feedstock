@@ -1,6 +1,5 @@
 {% set version = "1.7.1" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-targets
@@ -13,8 +12,7 @@ source:
   sha256: 7e1b5f5973d943e19c8a234eb673819b6885b753f8e1122279be420b527a97e4
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/

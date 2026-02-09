@@ -1,4 +1,4 @@
-{% set version = "1.11.4" %}
+{% set version = "1.12.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/targets_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/targets/targets_{{ version }}.tar.gz
-  sha256: bed256cb8f0c9a54c5efbca3424a13d7a0544ba404c8637817a14e2f7d894937
+  sha256: 9ae2e0edd25bf5f34eb97f566e74073fdbe8bd968b43475a964882875fa3a06e
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -68,8 +68,8 @@ about:
   home: https://docs.ropensci.org/targets/
   dev_url: https://github.com/ropensci/targets
   license: MIT
-  summary: As a pipeline toolkit for Statistics and data science in R, the 'targets' package brings together function-oriented programming and 'Make'-like declarative workflows. It analyzes the dependency relationships among the tasks of a workflow, skips steps that are already up to date, runs the necessary computation
-    with optional parallel workers, abstracts files as R objects, and provides tangible evidence that the results match the underlying code and data. The methodology in this package borrows from GNU 'Make' (2015, ISBN:978-9881443519) and 'drake' (2018, <doi:10.21105/joss.00550>).
+  summary: As a pipeline toolkit for Statistics and data science in R, the 'targets' package brings together function-oriented programming and 'Make'-like declarative workflows. It analyzes the dependency relationships among the tasks of a workflow, skips steps that are already up to date, runs the necessary 
+    computation with optional parallel workers, abstracts files as R objects, and provides tangible evidence that the results match the underlying code and data. The methodology in this package borrows from GNU 'Make' (2015, ISBN:978-9881443519) and 'drake' (2018, <doi:10.21105/joss.00550>).
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
